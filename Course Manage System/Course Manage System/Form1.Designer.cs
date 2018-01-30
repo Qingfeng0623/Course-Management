@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.courseDataSet11 = new Course_Manage_System.CourseDataSet1();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -40,6 +45,11 @@
             this.classSpeakerTableAdapter = new Course_Manage_System.CourseDBDataSet1TableAdapters.ClassSpeakerTableAdapter();
             this.classSpeakerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.班级DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.课程名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.教师姓名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classSpeakerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.courseDBDataSet12 = new Course_Manage_System.CourseDBDataSet1();
             this.classSpeakerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.courseDBDataSet11 = new Course_Manage_System.CourseDBDataSet1();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,16 +58,6 @@
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.courseDataSet1 = new Course_Manage_System.CourseDataSet1();
             this.courseTableAdapter = new Course_Manage_System.CourseDataSet1TableAdapters.CourseTableAdapter();
-            this.courseDBDataSet12 = new Course_Manage_System.CourseDBDataSet1();
-            this.classSpeakerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.班级DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.课程名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.教师姓名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDataSet11)).BeginInit();
@@ -65,12 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -80,9 +80,10 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label8.Font = new System.Drawing.Font("仿宋", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.ForeColor = System.Drawing.Color.Green;
-            this.label8.Location = new System.Drawing.Point(264, 27);
+            this.label8.Location = new System.Drawing.Point(198, 22);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(445, 60);
+            this.label8.Size = new System.Drawing.Size(356, 48);
             this.label8.TabIndex = 17;
             this.label8.Text = "余家头培训机构";
             // 
@@ -92,6 +93,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cNameDataGridViewTextBoxColumn,
@@ -100,164 +102,13 @@
             this.chourDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.courseBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 116);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(740, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(555, 205);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // courseBindingSource1
-            // 
-            this.courseBindingSource1.DataMember = "Course";
-            this.courseBindingSource1.DataSource = this.courseDataSet11;
-            // 
-            // courseDataSet11
-            // 
-            this.courseDataSet11.DataSetName = "CourseDataSet1";
-            this.courseDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 9);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(67, 33);
-            this.linkLabel1.TabIndex = 20;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Link";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // classSpeakerBindingSource
-            // 
-            this.classSpeakerBindingSource.DataMember = "ClassSpeaker";
-            this.classSpeakerBindingSource.DataSource = this.courseDBDataSet1;
-            // 
-            // courseDBDataSet1
-            // 
-            this.courseDBDataSet1.DataSetName = "CourseDBDataSet1";
-            this.courseDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // classSpeakerTableAdapter
-            // 
-            this.classSpeakerTableAdapter.ClearBeforeFill = true;
-            // 
-            // classSpeakerBindingSource1
-            // 
-            this.classSpeakerBindingSource1.DataMember = "ClassSpeaker";
-            this.classSpeakerBindingSource1.DataSource = this.courseDBDataSet1;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.班级DataGridViewTextBoxColumn,
-            this.课程名,
-            this.教师姓名DataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.classSpeakerBindingSource3;
-            this.dataGridView2.Location = new System.Drawing.Point(179, 467);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(439, 220);
-            this.dataGridView2.TabIndex = 21;
-            // 
-            // classSpeakerBindingSource2
-            // 
-            this.classSpeakerBindingSource2.DataMember = "ClassSpeaker";
-            this.classSpeakerBindingSource2.DataSource = this.courseDBDataSet11;
-            // 
-            // courseDBDataSet11
-            // 
-            this.courseDBDataSet11.DataSetName = "CourseDBDataSet1";
-            this.courseDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(32, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 31);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "课程";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(102, 425);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 31);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "上课老师";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Course_Manage_System.Properties.Resources.refresh;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(108, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 39);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.courseDataSet1;
-            // 
-            // courseDataSet1
-            // 
-            this.courseDataSet1.DataSetName = "CourseDataSet1";
-            this.courseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
-            // 
-            // courseDBDataSet12
-            // 
-            this.courseDBDataSet12.DataSetName = "CourseDBDataSet1";
-            this.courseDBDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // classSpeakerBindingSource3
-            // 
-            this.classSpeakerBindingSource3.DataMember = "ClassSpeaker";
-            this.classSpeakerBindingSource3.DataSource = this.courseDBDataSet12;
-            // 
-            // 班级DataGridViewTextBoxColumn
-            // 
-            this.班级DataGridViewTextBoxColumn.DataPropertyName = "班级";
-            this.班级DataGridViewTextBoxColumn.HeaderText = "班级";
-            this.班级DataGridViewTextBoxColumn.Name = "班级DataGridViewTextBoxColumn";
-            this.班级DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // 课程名
-            // 
-            this.课程名.DataPropertyName = "课程名";
-            this.课程名.HeaderText = "课程名";
-            this.课程名.Name = "课程名";
-            this.课程名.ReadOnly = true;
-            // 
-            // 教师姓名DataGridViewTextBoxColumn
-            // 
-            this.教师姓名DataGridViewTextBoxColumn.DataPropertyName = "教师姓名";
-            this.教师姓名DataGridViewTextBoxColumn.HeaderText = "教师姓名";
-            this.教师姓名DataGridViewTextBoxColumn.Name = "教师姓名DataGridViewTextBoxColumn";
-            this.教师姓名DataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cNameDataGridViewTextBoxColumn
             // 
@@ -294,12 +145,170 @@
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataMember = "Course";
+            this.courseBindingSource1.DataSource = this.courseDataSet11;
+            // 
+            // courseDataSet11
+            // 
+            this.courseDataSet11.DataSetName = "CourseDataSet1";
+            this.courseDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.linkLabel1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(9, 7);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(54, 27);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Link";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // classSpeakerBindingSource
+            // 
+            this.classSpeakerBindingSource.DataMember = "ClassSpeaker";
+            this.classSpeakerBindingSource.DataSource = this.courseDBDataSet1;
+            // 
+            // courseDBDataSet1
+            // 
+            this.courseDBDataSet1.DataSetName = "CourseDBDataSet1";
+            this.courseDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classSpeakerTableAdapter
+            // 
+            this.classSpeakerTableAdapter.ClearBeforeFill = true;
+            // 
+            // classSpeakerBindingSource1
+            // 
+            this.classSpeakerBindingSource1.DataMember = "ClassSpeaker";
+            this.classSpeakerBindingSource1.DataSource = this.courseDBDataSet1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.班级DataGridViewTextBoxColumn,
+            this.课程名,
+            this.教师姓名DataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.classSpeakerBindingSource3;
+            this.dataGridView2.Location = new System.Drawing.Point(134, 374);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 27;
+            this.dataGridView2.Size = new System.Drawing.Size(329, 176);
+            this.dataGridView2.TabIndex = 21;
+            // 
+            // 班级DataGridViewTextBoxColumn
+            // 
+            this.班级DataGridViewTextBoxColumn.DataPropertyName = "班级";
+            this.班级DataGridViewTextBoxColumn.HeaderText = "班级";
+            this.班级DataGridViewTextBoxColumn.Name = "班级DataGridViewTextBoxColumn";
+            this.班级DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // 课程名
+            // 
+            this.课程名.DataPropertyName = "课程名";
+            this.课程名.HeaderText = "课程名";
+            this.课程名.Name = "课程名";
+            this.课程名.ReadOnly = true;
+            // 
+            // 教师姓名DataGridViewTextBoxColumn
+            // 
+            this.教师姓名DataGridViewTextBoxColumn.DataPropertyName = "教师姓名";
+            this.教师姓名DataGridViewTextBoxColumn.HeaderText = "教师姓名";
+            this.教师姓名DataGridViewTextBoxColumn.Name = "教师姓名DataGridViewTextBoxColumn";
+            this.教师姓名DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // classSpeakerBindingSource3
+            // 
+            this.classSpeakerBindingSource3.DataMember = "ClassSpeaker";
+            this.classSpeakerBindingSource3.DataSource = this.courseDBDataSet12;
+            // 
+            // courseDBDataSet12
+            // 
+            this.courseDBDataSet12.DataSetName = "CourseDBDataSet1";
+            this.courseDBDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // classSpeakerBindingSource2
+            // 
+            this.classSpeakerBindingSource2.DataMember = "ClassSpeaker";
+            this.classSpeakerBindingSource2.DataSource = this.courseDBDataSet11;
+            // 
+            // courseDBDataSet11
+            // 
+            this.courseDBDataSet11.DataSetName = "CourseDBDataSet1";
+            this.courseDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(24, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 25);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "课程";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(76, 340);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 25);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "上课老师";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Course_Manage_System.Properties.Resources.refresh;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(81, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 31);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.courseDataSet1;
+            // 
+            // courseDataSet1
+            // 
+            this.courseDataSet1.DataSetName = "CourseDataSet1";
+            this.courseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
+            // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1044, 714);
+            this.ClientSize = new System.Drawing.Size(783, 571);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -307,6 +316,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -317,12 +327,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

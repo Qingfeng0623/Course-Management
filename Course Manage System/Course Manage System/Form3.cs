@@ -161,7 +161,6 @@ namespace Course_Manage_System
             {
                 try
                 {
-
                     string zhi = dataGridView2.SelectedRows[0].Cells[0].Value.ToString();//获取第一个单元格的值
 
                     int r = -1;
@@ -387,8 +386,6 @@ namespace Course_Manage_System
         private void button13_Click(object sender, EventArgs e)
         {
             load();
-        }
-
-        
+        }        
     }
 }

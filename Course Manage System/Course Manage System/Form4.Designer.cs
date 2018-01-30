@@ -33,8 +33,9 @@
             this.学生姓名DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.班级DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.课程DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chooseClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chooseClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.courseDBDataSet1 = new Course_Manage_System.CourseDBDataSet1();
+            this.chooseClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.班级DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.课程名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +58,11 @@
             this.classStateTableAdapter = new Course_Manage_System.CourseDBDataSet1TableAdapters.ClassStateTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.courseTableAdapter1 = new Course_Manage_System.CourseDataSet1TableAdapters.CourseTableAdapter();
-            this.chooseClassBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classStateBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classStateBindingSource)).BeginInit();
@@ -68,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseStateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -77,19 +78,21 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.学生姓名DataGridViewTextBoxColumn,
             this.班级DataGridViewTextBoxColumn,
             this.课程DataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.chooseClassBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(139, 69);
+            this.dataGridView1.Location = new System.Drawing.Point(104, 55);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.ShowCellErrors = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(348, 120);
             this.dataGridView1.TabIndex = 2;
             // 
             // 学生姓名DataGridViewTextBoxColumn
@@ -113,15 +116,20 @@
             this.课程DataGridViewTextBoxColumn.Name = "课程DataGridViewTextBoxColumn";
             this.课程DataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // chooseClassBindingSource
+            // chooseClassBindingSource1
             // 
-            this.chooseClassBindingSource.DataMember = "ChooseClass";
-            this.chooseClassBindingSource.DataSource = this.courseDBDataSet1;
+            this.chooseClassBindingSource1.DataMember = "ChooseClass";
+            this.chooseClassBindingSource1.DataSource = this.courseDBDataSet1;
             // 
             // courseDBDataSet1
             // 
             this.courseDBDataSet1.DataSetName = "CourseDBDataSet1";
             this.courseDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chooseClassBindingSource
+            // 
+            this.chooseClassBindingSource.DataMember = "ChooseClass";
+            this.chooseClassBindingSource.DataSource = this.courseDBDataSet1;
             // 
             // dataGridView4
             // 
@@ -129,6 +137,7 @@
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AllowUserToOrderColumns = true;
             this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.班级DataGridViewTextBoxColumn2,
@@ -138,11 +147,12 @@
             this.上课时间DataGridViewTextBoxColumn,
             this.地点DataGridViewTextBoxColumn});
             this.dataGridView4.DataSource = this.classStateBindingSource1;
-            this.dataGridView4.Location = new System.Drawing.Point(139, 286);
+            this.dataGridView4.Location = new System.Drawing.Point(104, 229);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowTemplate.Height = 27;
-            this.dataGridView4.Size = new System.Drawing.Size(784, 150);
+            this.dataGridView4.Size = new System.Drawing.Size(588, 120);
             this.dataGridView4.TabIndex = 5;
             // 
             // 班级DataGridViewTextBoxColumn2
@@ -197,11 +207,12 @@
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(411, 458);
+            this.button1.Location = new System.Drawing.Point(208, 374);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 48);
+            this.button1.Size = new System.Drawing.Size(86, 38);
             this.button1.TabIndex = 6;
-            this.button1.Text = "登记";
+            this.button1.Text = "登记学员";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -210,9 +221,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(112, 24);
+            this.label1.Location = new System.Drawing.Point(84, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 27);
+            this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "选课信息";
             // 
@@ -221,9 +233,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(112, 243);
+            this.label4.Location = new System.Drawing.Point(84, 194);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 27);
+            this.label4.Size = new System.Drawing.Size(74, 21);
             this.label4.TabIndex = 10;
             this.label4.Text = "班级信息";
             // 
@@ -273,9 +286,10 @@
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = global::Course_Manage_System.Properties.Resources.refresh;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(21, 12);
+            this.button2.Location = new System.Drawing.Point(16, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 39);
+            this.button2.Size = new System.Drawing.Size(32, 31);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -284,29 +298,41 @@
             // 
             this.courseTableAdapter1.ClearBeforeFill = true;
             // 
-            // chooseClassBindingSource1
+            // button3
             // 
-            this.chooseClassBindingSource1.DataMember = "ChooseClass";
-            this.chooseClassBindingSource1.DataSource = this.courseDBDataSet1;
+            this.button3.BackColor = System.Drawing.Color.Navy;
+            this.button3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(366, 374);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 38);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "登记课程";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Course_Manage_System.Properties.Resources._5546d03a6e14e8b9c6dc650250abdc3b;
-            this.ClientSize = new System.Drawing.Size(970, 542);
+            this.ClientSize = new System.Drawing.Size(728, 434);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "服务台";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classStateBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classStateBindingSource)).EndInit();
@@ -314,7 +340,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.courseDBDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseStateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classSpeakerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chooseClassBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,6 +376,7 @@
         private System.Windows.Forms.Button button2;
         private CourseDataSet1TableAdapters.CourseTableAdapter courseTableAdapter1;
         private System.Windows.Forms.BindingSource chooseClassBindingSource1;
+        private System.Windows.Forms.Button button3;
 
     }
 }

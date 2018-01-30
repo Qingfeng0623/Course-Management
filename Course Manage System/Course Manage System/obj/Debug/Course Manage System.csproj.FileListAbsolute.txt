@@ -11,3 +11,4 @@ D:\develop\Visual Studio 2013\Projects\Course Manage System\Course Manage System
 D:\develop\Visual Studio 2013\Projects\Course Manage System\Course Manage System\obj\Debug\Course_Manage_System.Form3.resources
 D:\develop\Visual Studio 2013\Projects\Course Manage System\Course Manage System\obj\Debug\Course_Manage_System.Form4.resources
 D:\develop\Visual Studio 2013\Projects\Course Manage System\Course Manage System\obj\Debug\Course_Manage_System.Form5.resources
+D:\develop\Visual Studio 2013\Projects\Course Manage System\Course Manage System\obj\Debug\Course_Manage_System.Form6.resources

@@ -39,7 +39,9 @@ namespace Course_Manage_System
                 this.chooseClassTableAdapter.Fill(this.courseDBDataSet1.ChooseClass);
             }
             catch (Exception ee)
-            { }
+            {
+                //MessageBox.Show(this, ee.Message, "加载失败！", MessageBoxButtons.OK);
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,6 +53,12 @@ namespace Course_Manage_System
         private void button2_Click(object sender, EventArgs e)
         {
             load();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
         }
 
         
