@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CourseDBDataSet" targetNamespace="http://tempuri.org/CourseDBDataSet.xsd" xmlns:mstns="http://tempuri.org/CourseDBDataSet.xsd" xmlns="http://tempuri.org/CourseDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CourseDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CourseDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Course_Manage_System.Properties.Settings.GlobalReference.Default.CourseDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ChooseClassTableAdapter" GeneratorDataComponentClassName="ChooseClassTableAdapter" Name="ChooseClass" UserDataComponentName="ChooseClassTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CourseDBConnectionString (Settings)" DbObjectName="CourseDB.dbo.ChooseClass" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 班级, 课程 FROM dbo.ChooseClass</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="班级" DataSetColumn="班级" />
+              <Mapping SourceColumn="课程" DataSetColumn="课程" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CourseDBConnectionString (Settings)" DbObjectName="CourseDB.dbo.ChooseClass" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 班级, 课程 FROM dbo.ChooseClass</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CourseDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CourseDBDataSet" msprop:Generator_UserDSName="CourseDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChooseClass" msprop:Generator_TableClassName="ChooseClassDataTable" msprop:Generator_TableVarName="tableChooseClass" msprop:Generator_RowChangedName="ChooseClassRowChanged" msprop:Generator_TablePropName="ChooseClass" msprop:Generator_RowDeletingName="ChooseClassRowDeleting" msprop:Generator_RowChangingName="ChooseClassRowChanging" msprop:Generator_RowEvHandlerName="ChooseClassRowChangeEventHandler" msprop:Generator_RowDeletedName="ChooseClassRowDeleted" msprop:Generator_RowClassName="ChooseClassRow" msprop:Generator_UserTableName="ChooseClass" msprop:Generator_RowEvArgName="ChooseClassRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="班级" msprop:Generator_ColumnVarNameInTable="column班级" msprop:Generator_ColumnPropNameInRow="班级" msprop:Generator_ColumnPropNameInTable="班级Column" msprop:Generator_UserColumnName="班级">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="课程" msprop:Generator_ColumnVarNameInTable="column课程" msprop:Generator_ColumnPropNameInRow="课程" msprop:Generator_ColumnPropNameInTable="课程Column" msprop:Generator_UserColumnName="课程">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ChooseClass" />
+      <xs:field xpath="mstns:班级" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
